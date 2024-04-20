@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.primary-shadow {
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+}
+
+.btn-shadow {
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+  transition: all 250ms ease-in-out;
+}
+
+.btn-shadow:hover {
+  box-shadow: 3px 3px 0px 0px transparent;
+  -webkit-box-shadow: 3px 3px 0px 0px transparent;
+  -moz-box-shadow: 3px 3px 0px 0px transparent;
+  transition: all 250ms ease-in-out;
+}
+
+/* FONTS */
+
+.text-9xl-reg {
+  font-size: 8rem;
+  line-height: 8rem;
+  font-weight: normal;
+}
+
+.text-9xl-medium {
+  font-size: 8rem;
+  line-height: 8rem;
+  font-weight: 500;
+}
+
+.text-9xl-semibold {
+  font-size: 8rem;
+  line-height: 8rem;
+  font-weight: 600;
+}
+
+.text-9xl-bold {
+  font-size: 8rem;
+  line-height: 8rem;
+  font-weight: 700;
+}
+
+
+.text-8xl-reg {
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: normal;
+}
+
+.text-8xl-medium {
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 500;
+}
+
+.text-8xl-semibold {
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 600;
+}
+
+.text-8xl-bold {
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 700;
+}
+
+
+.text-7xl-reg {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-weight: normal;
+}
+
+.text-7xl-medium {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-weight: 500;
+}
+
+.text-7xl-semibold {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-weight: 600;
+}
+
+.text-7xl-bold {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-weight: 700;
+}
+
+
+.text-6xl-reg {
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  font-weight: normal;
+}
+
+.text-6xl-medium {
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  font-weight: 500;
+}
+
+.text-6xl-semibold {
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  font-weight: 600;
+}
+
+.text-6xl-bold {
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  font-weight: 700;
+}
+
+.text-5xl-reg {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: normal;
+}
+
+.text-5xl-medium {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+.text-5xl-semibold {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.text-5xl-bold {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.text-4xl-reg {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: normal;
+}
+
+.text-4xl-medium {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+
+.text-4xl-semibold {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+.text-4xl-bold {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+
+.text-3xl-reg {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: normal;
+}
+
+.text-3xl-medium {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
+.text-3xl-semibold {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.text-3xl-bold {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.text-2xl-reg {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+.text-2xl-medium {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.text-2xl-semibold {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.text-2xl-bold {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+
+.text-xl-reg {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: normal;
+}
+
+.text-xl-medium {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.text-xl-semibold {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.text-xl-bold {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+
+.text-lg-reg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: normal;
+}
+
+.text-lg-medium {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.text-lg-semibold {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.text-lg-bold {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+
+.text-base-reg {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+}
+
+.text-base-medium {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.text-base-semibold {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.text-base-bold {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+
+.text-sm-reg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: normal;
+}
+
+.text-sm-medium {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.text-sm-semibold {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.text-sm-bold {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+
+.text-xs-reg {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: normal;
+}
+
+.text-xs-medium {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+.text-xs-semibold {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.text-xs-bold {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
